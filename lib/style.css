@@ -38,7 +38,8 @@ body {
 }
 
 .calculator button {
-  /* user-select: none; */
+  /* 禁止用户选中按钮 */
+  user-select: none;
   /* 设定内边距 */
   margin: 8px;
   /* 设定外边距 */
@@ -76,7 +77,10 @@ body {
 }
 
 .result {
-  
+  /* 禁止文本换行 */
+  white-space: nowrap;
+  /* 设置文本超出范围时就隐藏 */
+  overflow: hidden;
   /* 设置文字在最右边 */
   text-align: right;
   /* 设置行高 */
@@ -84,7 +88,15 @@ body {
   /* 设置字体 */
   font-size: 48px;
   font-family: Helvetica;
-  color: #666;
   /* 设置左右外边距 */
   padding: 0 20px;
+  /* 设置文字颜色 */
+  color: #666;
+}
+
+.result .display {
+  /* 设置位置模式：相对定位 */
+  position: relative;
+  /* 设置向右浮动 */
+  float: right;
 }

@@ -9,7 +9,9 @@
       <div class="calculator">
         <!-- 计算结果 -->
         <div class="result" style="grid-area: result;">
-          {{ equation }}
+          <div class="display">
+            {{ equation }}
+          </div>
         </div>
         <!-- 功能按键 -->
         <button style="grid-area: ac;" @click="clear">AC</button>
