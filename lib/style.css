@@ -1,0 +1,88 @@
+body {
+  /* 所有元素居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* 设定背景颜色 */
+  background-color: #eee;
+}
+
+.calculator {
+  /* 设定按钮尺寸 */
+  --button-width: 80px;
+  --button-height: 80px;
+
+  /* 规定按照网格显示 */
+  display: grid;
+  /* 进行元素排版 */
+  grid-template-areas:
+    "result result result result"
+    "ac plus-minus percent devide"
+    "number-7 number-8 number-9 multiply"
+    "number-4 number-5 number-6 subtract"
+    "number-1 number-2 number-3 add"
+    "number-0 number-0 dot equal";
+  /* 设定横向列的大小 */
+  grid-template-columns: repeat(4, var(--button-width));
+  /* 设定纵向列的大小 */
+  grid-template-rows: repeat(6, var(--button-height));
+  /* Box-Shadow: x, y, 模糊半径，扩散半径，颜色 */
+  /* 设定一个左上角的亮光，一个右下角的暗光，通过逗号分割 */
+  box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1),
+    8px 8px 16px -10px rgba(0, 0, 0, 0.15);
+  /* 设置外边距 */
+  padding: 24px;
+  /* 设定圆角 */
+  border-radius: 20px;
+}
+
+.calculator button {
+  /* 设定内边距 */
+  margin: 10px;
+  /* 设定外边距 */
+  padding: 0;
+  /* 取消边框 */
+  border: 0;
+  /*  */
+  display: block;
+  /*  */
+  outline: none;
+  /* 设定圆角 */
+  border-radius: calc(0.5 * var(--button-height));
+  /* 设定字体;
+     字体大小，一定要带单位，要么px，要么rem;
+     颜色不能是font-color */
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: normal;
+  color: #999;
+  /* 设定按钮的背景，注意不是背景颜色，要用到渐层颜色 */
+  background: linear-gradient(
+    135deg,
+    rgba(230, 230, 230, 1) 0%,
+    rgba(246, 246, 246, 1) 100%
+  );
+  /* 设定一个左上角的亮光，一个右下角的暗光，通过逗号分割 */
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1),
+    4px 4px 10px -8px rgba(0, 0, 0, 0.3);
+}
+
+.calculator button:active {
+  /* 把阴影改到按钮内部去，用inset */
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset,
+    4px 4px 10px -8px rgba(0, 0, 0, 0.3) inset;
+}
+
+.result {
+  /* 设置文字在最右边 */
+  text-align: right;
+  /* 设置行高 */
+  line-height: var(--button-height);
+  /* 设置字体 */
+  font-size: 48px;
+  font-family: Helvetica;
+  color: #666;
+  /* 设置左右外边距 */
+  padding: 0 20px;
+}
