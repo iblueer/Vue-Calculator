@@ -29,8 +29,7 @@ body {
   grid-template-rows: repeat(6, var(--button-height));
   /* Box-Shadow: x, y, 模糊半径，扩散半径，颜色 */
   /* 设定一个左上角的亮光，一个右下角的暗光，通过逗号分割 */
-  box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1),
-    8px 8px 16px -10px rgba(0, 0, 0, 0.15);
+  box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1), 8px 8px 16px -10px rgba(0, 0, 0, 0.15);
   /* 设置外边距 */
   padding: 24px;
   /* 设定圆角 */
@@ -60,20 +59,14 @@ body {
   font-weight: normal;
   color: #999;
   /* 设定按钮的背景，注意不是背景颜色，要用到渐层颜色 */
-  background: linear-gradient(
-    135deg,
-    rgba(230, 230, 230, 1) 0%,
-    rgba(246, 246, 246, 1) 100%
-  );
+  background: linear-gradient(135deg, rgba(230, 230, 230, 1) 0%, rgba(246, 246, 246, 1) 100%);
   /* 设定一个左上角的亮光，一个右下角的暗光，通过逗号分割 */
-  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1),
-    4px 4px 10px -8px rgba(0, 0, 0, 0.3);
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1), 4px 4px 10px -8px rgba(0, 0, 0, 0.3);
 }
 
 .calculator button:active {
   /* 把阴影改到按钮内部去，用inset */
-  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset,
-    4px 4px 10px -8px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset, 4px 4px 10px -8px rgba(0, 0, 0, 0.3) inset;
 }
 
 .result {
